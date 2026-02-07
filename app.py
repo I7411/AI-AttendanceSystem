@@ -1,15 +1,15 @@
 import sys
 import os
-import cv2
-import numpy as np
+import cv2 # type: ignore
+import numpy as np # type: ignore
 import base64
-import joblib
+import joblib # type: ignore
 import ast
 import time
 import csv
 import glob
 from datetime import datetime
-from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify, send_file
+from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify, send_file # type: ignore
 import json
 
 # --- CẤU HÌNH ĐƯỜNG DẪN ĐỂ IMPORT SRC ---
@@ -22,7 +22,7 @@ from src.detector import FaceDetector
 from src.embedder import FaceEmbedder
 from src.liveness import calculate_yaw_from_frame  
 from src.config import MODEL_DIR, RESULT_DIR, RAW_DIR, DATA_DIR, KEY_FILE
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet # type: ignore
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_key'
